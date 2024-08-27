@@ -38,6 +38,18 @@ SkriptsSection:NewButton("Админка Infiniteyield", "скрипт: Sanechek
     loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 end)
 
+SkriptsSection:NewButton("Dex + decompiler", "ну ты долбаеб?", function()
+    loadstring(game:HttpGet("https://github.com/OfficiallyMelon/BetterDecompiler/raw/main/dex_betterdecompiler.lua"))()
+end)
+
+SkriptsSection:NewButton("Смена номеров", "скрипт: степашки", function()
+    for i,v in pairs(game.Players:GetPlayers()) do
+        for i,car in pairs(v.Cars:GetChildren()) do
+            game.ReplicatedStorage.ClientEvents.SmenaNomerovDonat:FireServer(car, "O000OO")
+            end
+        end
+end)
+
 -------------------------------------------------------------------
 
 
